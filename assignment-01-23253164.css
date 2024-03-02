@@ -1,0 +1,197 @@
+body {
+    background-color: rgb(248, 242, 241);
+
+}
+/*  
+* {
+    ...
+} will affect every HTML element on the page */
+*  {
+    text-align: center;
+}
+
+
+.pyramid-wrapper { 
+    display: flex;
+    flex-direction: column;
+    background-size: 100% 20%;
+    background-repeat: no-repeat;
+    clip-path: polygon(50% 0%, 20% 100%, 80% 100%); /*Top, Right, Left */
+    /* position:relative; */
+ }
+
+.shape {
+    margin: 0 auto; 
+} 
+
+/* 
+Treats - level 1 
+Triangle shape //actually a rectangle being clipped by clip path
+*/
+.level-1 {
+height: 125px;
+width: 1500px;
+margin-bottom: 12px; /* the white gap at the bottom */
+background-color: red;
+} 
+
+
+
+/*
+Fats Spreads Oils - level 2
+Trapezoid Shape //actually a rectangle being clipped
+*/ 
+.level-2 {
+height: 125px;
+width: 1500px;
+margin-bottom: 12px; /* the white gap at the bottom */ 
+background-color: rgb(255, 149, 0);
+}
+
+/*
+Meat & Alternatives - level 3
+Trapezoid Shape //actually a rectangle being clipped
+*/
+.level-3 {
+height: 125px;
+width: 1500px;
+background-color: rgb(255, 221, 0);   
+}
+
+/*
+Dairy - level 4
+Trapezoid Shape //actually a rectangle being clipped
+*/
+.level-4 {
+height: 125px;
+width: 1500px;
+background-color: rgb(0, 213, 255);   
+}
+
+/*
+Starchy foods - level 5
+Trapezoid Shape //actually a rectangle being clipped
+*/
+.level-5 {
+height: 125px;
+width: 1500px; 
+background-color: rgb(85, 56, 48);  
+}
+
+/*
+Vegetables, salad and fruit - level 6
+Trapezoid Shape //actually a rectangle being clipped
+*/
+.level-6 {
+height: 125px;
+width: 1500px;
+background-color: rgb(77, 198, 66);   
+}
+
+.counter {
+    /* display: none; */
+    position: bottom;
+
+}
+
+ .container {
+    visibility:visible;
+}
+
+.button-container {
+    display: flex;
+    /* position:absolute; */
+    justify-content: center;
+    align-items: end;
+    height: 125px;
+}
+
+
+.circle-button {
+    display: flex;
+    justify-content: center;
+    width:30px;
+    height:30px;
+    background:rgb(107, 107, 107);
+    border: 1px solid white; /* Add a solid white border with 1px width*/
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    visibility: hidden;
+}
+
+.shape:hover .circle-button {
+   visibility: visible;
+}
+
+/*
+Circle - level Value
+*/
+.circle {
+    display: flex;
+    justify-content: center;
+    width:30px;
+    height:30px;
+    background:rgb(107, 107, 107);
+    border: 1px solid white; /* Add a solid white border with 1px width*/
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.tablesPosition {
+    display: flex;
+    justify-content: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+/*
+
+To do:
+
+1) Make sure display is consistent throughout css 
+- If you have a flex display, then a different display: in-line
+You will start to get weird behaviour where things are not lining 
+up properly.
+
+2) CSS: look at the display flex section of w3
+
+3) Position: relative vs Position: absolute 
+P:R and P:A need one another to work
+P:R is the parent, everything with P:A will position itself to the centre of the P:R.
+You can then manually set it from it's new default position underneath with others
+
+Position relative: Is the top peg. If you set position relative that means containers with 
+P.A. will be a child of that class.
+
+                                    //if just .shape: hover, it will apply everything inside
+                                    //cury brackets to the the .shape when you hover over it.
+.shape: hover .circle_button {      //take the shape: hover, do everything inside the brackets
+    visibilty: visible              // apply that to .circle_button
+}    
+
+
+// To do:
+
+Use level 2 as the template
+Make the triangle bigger overall.
+Centre the button-container by adjusting the position after the button.container
+
+
+To make the traingle shape consistently a pyramid as you scale it up, change each level to be a rectangle, then put a triangle clip-path
+over all the rectangles. 
+*/
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Food Pyramid</title>
+        <link rel="stylesheet" href="assignment-01-23253164.css">
+       
+    </head>
+
+
+    <body>
+        <h1>Figure 1</h1>
+
+        <div class="pyramid-wrapper">
+
+            <div class="shape level-1" id="l1">
+                <div class="button-container" id="buttonsL1">
+                    <button class="circle-button" onclick="updateLevel(1,-1); setLevelSize('l1', -5)">-</button>
+
+                        <div class="circle" id="levelOne"></div>
+
+                    <button class="circle-button" onclick="updateLevel(1,+1); setLevelSize('l1', +5)">+</button>
+                </div>        
+            </div> 
+            
+
+            <div class="shape level-2" id="l2">
+                    <div class="button-container" id="buttonsL2">
+                        <button class="circle-button" onclick="updateLevel(2,-1); setLevelSize('l2', -5)">-</button>
+    
+                            <div class="circle" id="levelTwo"></div>
+    
+                        <button class="circle-button" onclick="updateLevel(2,+1); setLevelSize('l2', +5)">+</button>
+                    </div>            
+            </div>
+
+            <div class="shape level-3" id="l3">
+                <div class="button-container" id="buttonsL3">
+                    <button class="circle-button" onclick="updateLevel(3,-1); setLevelSize('l3', -5)">-</button>
+
+                        <div class="circle" id="levelThree"></div>
+
+                    <button class="circle-button" onclick="updateLevel(3,+1); setLevelSize('l3', +5)">+</button>
+                </div>
+            </div>
+
+            <div class="shape level-4" id="l4">
+                <div class="button-container" id="buttonsL4">
+                    <button class="circle-button" onclick="updateLevel(4,-1); setLevelSize('l4', -5)">-</button>
+
+                        <div class="circle" id="levelFour"></div>
+
+                    <button class="circle-button" onclick="updateLevel(4,+1); setLevelSize('l4', +5)">+</button>
+                </div>
+            </div>
+                
+
+
+            <div class="shape level-5" id="l5">
+                <div class="button-container" id="buttonsL5">
+                    <button class="circle-button" onclick="updateLevel(5,-1); setLevelSize('l5', -5)">-</button>
+
+                        <div class="circle" id="levelFive"></div>
+
+                    <button class="circle-button" onclick="updateLevel(5,+1); setLevelSize('l5', +5)">+</button>
+                </div>
+            </div>
+
+
+            <div class="shape level-6" id="l6">
+                <div class="button-container" id="buttonsL6">
+                    <button class="circle-button" onclick="updateLevel(6,-1); setLevelSize('l6', -5)">-</button>
+
+                        <div class="circle" id="levelSix"></div>
+
+                    <button class="circle-button" onclick="updateLevel(6,+1); setLevelSize('l6', +5)">+</button>
+                </div>
+            </div>
+        
+        
+        </div>
+
+
+
+            <br></br>
+
+        <!-- <p id="inputDate"></p> -->
+        <!-- <label for="tbuser">Date:</label> -->
+        <!-- <input type="text" id="tbuser" placeholder="YYYY-MM-DD" maxlength="10"> -->
+
+        <p id = "inputDate"></p>
+        <input type="date" id="setDate" onchange="setDate()" min=""/>
+        <p><b>Select Date</b></p>
+        <p>or</p>
+
+        
+         
+        <div id="date"></div>
+        <p></p>
+        <button onclick="displayDate()"><b>Autoset to now.</b></button>
+
+        <br></br>
+         
+        <button id="childrenButton" onclick="setUserType('child')"><b>Children 1 - 4</b></button>
+        <button id="adultButton" onclick="setUserType('adult')"><b>Adult, Teens & Children 5+</b></button>
+
+        <br></br>
+        
+        <div class="tablesPosition">
+        
+        <table id="childrenTable" >
+            
+            <tr>
+                <th colspan="2">Children 1 - 4</th>
+            </tr>
+            <tr>
+                <th>1. Vegetables, Salad, Fruit</th>
+                <td>1 - 2 servings per day</td>
+            </tr>
+            <tr>
+                <th>2. Starchy Foods</th>
+                <td>1 - 2 servings per day</td>
+            </tr>
+            <tr>
+                <th>3. Dairy</th>
+                <td>2 - 3 servings per day</td>
+            </tr>           
+            <tr>
+                <th>4. Meat and alternatives</th>
+                <td>1 - 2 servings per day</td>
+            </tr>
+            <tr>
+                <th>5. Fats, Spreads and Oils</th>
+                <td>1 or less  minimal use</td>
+            </tr>
+            <tr>
+                <th>6. Treats</th>
+                <td>1 or less servings per day</td>
+            </tr>
+
+        </table>
+        
+        
+        
+        
+        <table id="adultTable" >
+            <tr>
+              <th colspan="2">Adults, Teens, Children 5+</th>
+            </tr>
+            <tr>
+              <th>1. Vegetables, Salad, Fruit</th>
+              <td>5 - 7 servings per day</td>
+            </tr>
+            <tr>
+                <th>2. Starchy Foods</th>
+                <td>3 - 5 servings per day</td>
+            </tr>
+            <tr>
+                <th>3. Dairy</th>
+                <td>2 - 3 servings per day</td>
+            </tr>
+            <tr>
+                <th>4. Meat and alternatives</th>
+                <td>2 - 3 servings per day</td>
+            </tr>
+            <tr>
+                <th>5. Fats, Spreads and Oils</th>
+                <td> 1 - 2 minimal use</td>
+            </tr>
+            <tr>
+                <th>6. Treats</th>
+                <td>1 or less servings per day</td>
+            </tr>
+
+          </table>
+
+
+        </div>
+
+
+
+        <p>The Food Pyramid shows how much of what you eat overall should come from each shelf to achieve a healthy, balanced diet.
+            The shape of the Food Pyramid shows the types of foods and drinks people need to eat most for healthy eating.
+            It is divided into six shelves and each provides you with the range of nutrients and energy needed for good health. Healthy 
+            eating is all about choosing the right amounts from each shelf.
+        </p>
+
+        <br></br>
+        
+        <p>
+            An interactive Food Pyramid allows you to record the number of foods
+            consumed in any given day by categorising and recording the food types for each shelf.
+        </p>
+
+        <!-- import the script at the end, not the top -->
+        <script src="assignment-01-23253164.js"></script>
+    </body>
+</html>
