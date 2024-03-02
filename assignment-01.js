@@ -26,8 +26,6 @@
             // other - adults, teenagers and children 5 and over
             document.getElementById("adultTable").style.background = "grey";
             document.getElementById("childrenTable").style.background = "white";
-
-            
             
             /* Function to switch between children and adult pyramid*/
             function setUserType(choice){
@@ -106,7 +104,6 @@
               }
               
               element.style.height = newHeight + "px";
-
             }
 
 
