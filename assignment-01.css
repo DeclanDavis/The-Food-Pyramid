@@ -9,15 +9,12 @@ body {
 *  {
     text-align: center;
 }
-
-
 .pyramid-wrapper { 
     display: flex;
     flex-direction: column;
     background-size: 100% 20%;
     background-repeat: no-repeat;
     clip-path: polygon(50% 0%, 20% 100%, 80% 100%); /*Top, Right, Left */
-    /* position:relative; */
  }
 
 .shape {
@@ -34,8 +31,6 @@ width: 1500px;
 margin-bottom: 12px; /* the white gap at the bottom */
 background-color: red;
 } 
-
-
 
 /*
 Fats Spreads Oils - level 2
@@ -89,9 +84,7 @@ background-color: rgb(77, 198, 66);
 }
 
 .counter {
-    /* display: none; */
     position: bottom;
-
 }
 
  .container {
@@ -158,40 +151,4 @@ th, td {
     text-align: left;
 }
 
-/*
-
-To do:
-
-1) Make sure display is consistent throughout css 
-- If you have a flex display, then a different display: in-line
-You will start to get weird behaviour where things are not lining 
-up properly.
-
-2) CSS: look at the display flex section of w3
-
-3) Position: relative vs Position: absolute 
-P:R and P:A need one another to work
-P:R is the parent, everything with P:A will position itself to the centre of the P:R.
-You can then manually set it from it's new default position underneath with others
-
-Position relative: Is the top peg. If you set position relative that means containers with 
-P.A. will be a child of that class.
-
-                                    //if just .shape: hover, it will apply everything inside
-                                    //cury brackets to the the .shape when you hover over it.
-.shape: hover .circle_button {      //take the shape: hover, do everything inside the brackets
-    visibilty: visible              // apply that to .circle_button
-}    
-
-
-// To do:
-
-Use level 2 as the template
-Make the triangle bigger overall.
-Centre the button-container by adjusting the position after the button.container
-
-
-To make the traingle shape consistently a pyramid as you scale it up, change each level to be a rectangle, then put a triangle clip-path
-over all the rectangles. 
-*/
 
