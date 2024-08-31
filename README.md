@@ -1,4 +1,4 @@
-# **TheFoodPyramid**
+# **The Food Pyramid**
 ## **Overview**
 
 The Food Pyramid is an app I developed as part of my module, **Web Information Processing**, in Maynooth University, National University of Ireland Maynooth.
